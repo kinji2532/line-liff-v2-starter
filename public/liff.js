@@ -9,8 +9,8 @@ window.onload = function() {
     // otherwise, pass defaultLiffId
     if (useNodeJS) {
         fetch('/send-id')
-            .then(function(reqResponse) {
-		window.alert(reqResponse.json());
+            .then(async function(reqResponse) {
+		window.alert(await reqResponse.json());
                 return reqResponse.json();
             })
             .then(function(jsonResponse) {
