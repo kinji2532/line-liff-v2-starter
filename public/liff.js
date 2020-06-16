@@ -10,6 +10,7 @@ window.onload = function() {
     if (useNodeJS) {
         fetch('/send-id')
             .then(function(reqResponse) {
+		console.log(reqResponse.json());
                 return reqResponse.json();
             })
             .then(function(jsonResponse) {
