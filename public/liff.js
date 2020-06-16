@@ -13,7 +13,6 @@ window.onload = function() {
                 return reqResponse.json();
             })
             .then(function(jsonResponse) {
-		window.alert(JSON.stringify(jsonREsponse));
                 myLiffId = jsonResponse.id;
                 initializeLiffOrDie(myLiffId);
             })
