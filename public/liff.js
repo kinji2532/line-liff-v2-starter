@@ -9,11 +9,11 @@ window.onload = function() {
     // otherwise, pass defaultLiffId
     if (useNodeJS) {
         fetch('/send-id')
-            .then(async function(reqResponse) {
-		window.alert(await reqResponse.json());
+            .then(function(reqResponse) {
                 return reqResponse.json();
             })
             .then(function(jsonResponse) {
+		window.alert(JSON.stringify(jsonREsponse));
                 myLiffId = jsonResponse.id;
                 initializeLiffOrDie(myLiffId);
             })
